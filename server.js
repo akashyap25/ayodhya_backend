@@ -5,6 +5,7 @@ const PrasadModel = require ('./db/Model');
 const cors = require('cors');
 const port =  process.env.PORT || 5000  ;
 const path = require('path'); 
+const BASE_URL = process.env.BASE_URL;
 
 
 
@@ -21,7 +22,7 @@ dotenv.config();
 
 
 // Route for prasad Form
-app.post("/prasadForm", async (req, res) => {
+app.post(`${BASE_URL}/prasadForm`, async (req, res) => {
     try {
         const formdata = req.body;
         const prasadData = new PrasadModel(formdata);
