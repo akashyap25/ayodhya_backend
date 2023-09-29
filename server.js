@@ -22,7 +22,7 @@ dotenv.config();
 
 
 // Route for prasad Form
-app.post(`${BASE_URL}/prasadForm`, async (req, res) => {
+app.post('/prasadForm', async (req, res) => {
     try {
         const formdata = req.body;
         const prasadData = new PrasadModel(formdata);
