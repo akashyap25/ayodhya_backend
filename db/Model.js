@@ -30,6 +30,10 @@ const prasadSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    templeSelection: {
+      type: [String], // Store selected temple names or IDs as an array of strings
+      required: true,
+    },
   },
   { timestamps: true }
 );
